@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #ffb5b5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            height: 80vh;
+            width: 80%;
+            overflow-x: auto;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .box {
+            padding: 20px;
+            border-radius: 20px;
+            border: 4px solid #ffffff;
+            overflow-y: auto;
+            height: 40vh;
+            text-align: center;
+        }
+
+        .head {
+            color: aliceblue;
+            font-size: 1.5rem;
+
+        }
+
+        .btn {
+            background-color: transparent;
+            border: 2px solid white;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            transition: 0.3s all ease-in;
+
+            border-radius: 10px;
+
+        }
+
+        .btn:hover {
+            background-color: white;
+            border-radius: 20px;
+            color: #ffb5b5;
+        }
+
+        .desc {
+            color: white;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+
+            <p class="head" id="head"></p>
+            <p class="desc" id="desc"></p>
+            <!-- <button id="preceed" class="btn" onclick="PreceedTxt()"> <  </button> -->
+                    <button id="succeed" class="btn" onclick="SucceedTxt()"> ></button>
+        </div>
+    </div>
+</body>
+<script>
+    let index = 0;
+    head = document.getElementById("head")
+    desc = document.getElementById("desc")
+
+    function Update() {
+        if(index<0){
+            console.log("error")
+        }
+        if (index === 1) {
+            console.log("done")
+            head.innerHTML = "Hello Shona! 💖💖"
+            desc.innerHTML = "Chloo aab acche se maafi mangte hh , I am sorry yrr Nhi aa paya, aab mai kya kru mai schme Mummy's Boy hu. Sorrry mummy ne mana kar dia tha, :(("
+        }
+        if (index === 2) {
+            console.log("done")
+            head.innerHTML = "Sorry 🥺🥺"
+            desc.innerHTML = "Accha mai naa aapse bhot rudely bat kar deta hu kbhi kbhi, Sorrry ji, pakka wala pakka aapse kabhi bhi rudely bat nhi krungaa , btao meri phool si pari se aise bat karta hu"
+        }
+        if (index === 3) {
+            console.log("done")
+            head.innerHTML = "Aurr"
+            desc.innerHTML = "Mai na gussa hona hi chhor dunga na hi gussa hounga na hi aapse buri tarah bat krunga, sorrry ji, pakka sudharlunga khud ko, Sorry apke pure ke pure 3 ghante barbaad kra dia , actually i think pura din, Sorry!"
+        }
+        if (index === 4) {
+            console.log("done")
+            head.innerHTML = "Dekhoo"
+            desc.innerHTML = "Dekhoo agr mai gussa krta hu mtlb pyaar bhi bhot hi krta hu , too dekhoo aise na chhorne ki bat nhi krte , pta hh bolte hi chest pain hota h, Accha too sunoo efforts kam hh na,pakka jitne bhi din bache hh na sath school me, dekhna pakka efforts bdhaunga"
+        }
+        if (index === 5) {
+            console.log("done")
+            head.innerHTML = "💟💟"
+            desc.innerHTML = "Aaab to maaf krdooo na jaan, mere sweetheart nhi ho? , Accha wifeyy ji to mujhe kb khila rhe ho ye maggi huh? , Btao akele akele kha gaye :( , accha mai khilaunga apko chef ke hath ki maggi dekhna kitni acchi banegii jao jao aapse accha khana banata hu "
+        }
+        if (index === 6) {
+            console.log("done")
+            head.innerHTML = "I love youu ji BHOT SARA"
+            desc.innerHTML = "Accha sunoo mai na aapse bhot bhot bhot bhot jyada pyaar krta huu, aurr na sirf apko chahta hu, apko khona nhi chahta , kyuki aap meriii pyaaariiii si shonaa hooo! , I loveee youuuuuuuu merii jaan 💟💟 Mu tomaku bahut bhala pauchii 💟💟💟💟💟 Aaaami tomake khub bhaloo bashi 💟💟💟"
+        }
+    }
+
+    function PreceedTxt(){
+        index = index - 1;
+        console.log(index)
+        Update()
+    }
+    function SucceedTxt(){
+        index = index + 1;
+        console.log(index)
+        Update()
+    }
+</script>
+
+</html>
